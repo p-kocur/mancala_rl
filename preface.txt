@@ -1,0 +1,19 @@
+W reakcji na niepowodzenie pierwszego podejścia do stworzenia agenta przejawiającego zrozumienie gry mancala za pomocą metod reinforcment learning, postanowiłem zmienić plan - przede wszystkim lepiej go zarysować. 
+
+Moim głównym celem będzie stworzenie konwolucyjnej sieci neuronowej aproksymującej prawdopodobieństwo zwycięstwa na podstawie stanu gry. 
+
+Pierwszym pomysłem jest: stworzenie czterech agentów kierujących się prostymi strategiami i trenowanie kolejnych agentów na podstawie wszystkich poprzednich zgodnie z najprostszą metodą Qlearning. 
+
+Zacznijmy od:
+- modyfikacji klasy Game odpowiednio do nowych celów,
+- stworzenia czterech podstawowych agentów:
+	- pierwszy będzie priorytetyzować przejmowanie kul od drugiego gracza,
+	- drugi będzie starał się jak najczęściej zdobywać kolejny ruch,
+	- trzeci będzie chciał w każdym ruchu wrzucić kulkę do swojej mancali,
+	- czwarty będzie wykonywał ruchy losowo,
+- stworzenie funkcji (metody?) dzięki której agenci będą mogli grać ze sobą. 
+
+Następnie:
+- utworzyć architekturę sieci neuronowej,
+- zrewidować klasę NNQ,
+- zrewidować funkcję Qlearn_batch wraz z jej podrzędnymi,
